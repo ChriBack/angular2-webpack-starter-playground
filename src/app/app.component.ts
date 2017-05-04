@@ -40,12 +40,20 @@ import { AppState } from './app.service';
         routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
         About
       </a>
+      <a [routerLink]=" ['./comments'] "
+        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+        Comments
+      </a>
+       <a [routerLink]=" ['./posts'] "
+        routerLinkActive="active" [routerLinkActiveOptions]= "{exact: true}">
+        Posts
+      </a>
     </nav>
 
     <main>
       <router-outlet></router-outlet>
     </main>
-
+    <div class="clearfix" style="clear:both;"></div>
     <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
 
     <footer>
